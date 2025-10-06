@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reporte Looker Studio</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+    }
+    iframe {
+      border: none;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <iframe 
+    src="https://apps.powerapps.com/play/e/default-efc5244d-9097-49ad-8da5-533610e5d713/a/df06e018-c4df-4eb6-b35a-13de98be4df8?tenantId=efc5244d-9097-49ad-8da5-533610e5d713&hint=8d447147-6f8b-4c8d-a9bc-911e3e42c70e&sourcetime=1758749098276&hidenavbar=true" 
+    allowfullscreen>
+  </iframe>
+</body>
+</html>
