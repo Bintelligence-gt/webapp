@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Login</title>
@@ -89,7 +90,6 @@
         let pass = document.getElementById("pass").value.trim();
         let error = document.getElementById("error");
 
-        // Lista de usuarios válidos con su contraseña y destino
         const users = {
             "LICHOS": { pass: "1234", url: "https://bintelligence-gt.github.io/lichosdash/" },
             "Administrador": { pass: "1234", url: "https://bintelligence-gt.github.io/maps/" },
@@ -97,13 +97,19 @@
         };
 
         if (users[user] && users[user].pass === pass) {
+
+            // 🔐 Guardar sesión
+            localStorage.setItem("auth", "true");
+            localStorage.setItem("user", user);
+
+            // Redirigir
             window.location.href = users[user].url;
+
         } else {
             error.innerHTML = "Usuario o contraseña incorrectos";
         }
     }
 
-    // Permitir Enter
     document.addEventListener("keydown", function(e){
         if(e.key === "Enter"){
             login();
@@ -113,8 +119,3 @@
 
 </body>
 </html>
-
-
-
-
-
